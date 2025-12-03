@@ -24,7 +24,6 @@ jobs:
     - name: replace application.yml
       env:
         AUTH_KEY_SEOUL_DATA: ${{ secrets.AUTH_KEY_SEOUL_DATA }}
-      # sed는 리눅스에서 사용하는 replace 문법
       run: sed -ie "s/##auth_key_seoul_data##/$AUTH_KEY_SEOUL_DATA/g" ./config/application.yml
 
     - name: archive to tar.gz
