@@ -3,6 +3,7 @@ import os
 
 root_dir = '/src/kafka-producer'
 with open(f'{root_dir}/config/application.yml','r') as config:
+    # 딕셔너리 형태로 api 키, 밸류 저장
     all_conf_dict = yaml.load(config, Loader=yaml.FullLoader)
 
 for (root, dirs, files) in os.walk(root_dir):
